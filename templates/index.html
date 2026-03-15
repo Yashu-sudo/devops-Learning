@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.name }} | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <p class="eyebrow">Portfolio</p>
+            <h1>{{ profile.name }}</h1>
+            <h2>{{ profile.role }}</h2>
+            <p class="intro">{{ profile.about }}</p>
+            <div class="hero-meta">
+                <span>{{ profile.experience }} experience</span>
+                <span>{{ profile.location }}</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h3>About Me</h3>
+            <p>
+                I am {{ profile.name }}, a professional with {{ profile.experience }}
+                of experience in cloud and DevOps. I enjoy working on scalable systems,
+                automation, and deployment processes that keep products fast and dependable.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>Skill Set</h3>
+            <ul class="skills">
+                {% for skill in profile.skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="card contact">
+            <h3>Connect With Me</h3>
+            <p>If you would like to discuss cloud, DevOps, or new opportunities, feel free to connect.</p>
+            <div class="contact-list">
+                <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+                <a href="tel:{{ profile.phone | replace(' ', '') }}">{{ profile.phone }}</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
