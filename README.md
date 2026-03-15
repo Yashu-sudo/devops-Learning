@@ -233,3 +233,23 @@ sudo systemctl restart nginx
 4. Point `yashopslib.work.gd` to `44.223.71.73`
 5. Enable HTTPS with Certbot on port `443`
 6. Remove public access to port `5000`
+
+## Access screenshots
+
+### HTTP on port 5000
+
+Direct Gunicorn access during initial testing:
+
+![HTTP on port 5000](docs/images/http-port-5000.png)
+
+### HTTP on port 80
+
+Access through Nginx using the EC2 public IP:
+
+![HTTP on port 80](docs/images/http-port-80.png)
+
+### HTTPS on the domain
+
+Secure access after SSL was configured:
+
+![HTTPS on domain](docs/images/https-domain.png)
