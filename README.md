@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Flask Portfolio App
 
 This project is a basic Flask portfolio website for Yash. It includes:
@@ -289,3 +290,6 @@ sudo systemctl status nginx
 - Nginx handles incoming web traffic
 - Gunicorn serves the Flask app
 - Certbot installs and manages SSL certificates
+=======
+# devops-Learning
+>>>>>>> 236fca0710ef0e866a83cfc559ce259a8ce52ee7
